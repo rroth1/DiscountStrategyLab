@@ -13,8 +13,9 @@ public class Customer {
     private String customerID;
     private String customerName;
 
-    public Customer(String scannedCustomerID) {
+    public Customer(String scannedCustomerID, String customerName) {
         this.customerID = scannedCustomerID;
+        this.customerName=customerName;
     }
 
     //
@@ -26,7 +27,7 @@ public class Customer {
     public String getCustomerName() {
         return customerName;
     }
-    private static Customer[] customerList = {new Customer("AA", "John Smith"),
-        new Customer("AB", "Michael Jackson"),
-        new Customer("AC", "Meryl Streep")};
+//    private static Customer[] customerList = {new Customer("AA", "John Smith"),
+//        new Customer("AB", "Michael Jackson"),
+//        new Customer("AC", "Meryl Streep")};
 }

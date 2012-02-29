@@ -12,15 +12,16 @@ public class Receipt {
 
     private Customer customer;
     private LineItem[] lineItems;
+    private String customerID;
 
    public Receipt (String scannedCustomerID){
-               
+            this.customerID=scannedCustomerID; 
    }
-       private Customer lookUpCustomer() {
+       public Customer lookUpCustomer() {
         Customer customerLookUp = null;
 
         for (Customer c : customerList) {
-            if (scannedCustomerID.equals(c.getCustomerID())) {
+            if (customerID.equals(c.getCustomerID())) {
                 customerLookUp = c;
                 break;
             }
@@ -42,4 +43,8 @@ public class Receipt {
 
 
     }
+    
+        private Customer[] customerList = {new Customer("AA", "John Smith"),
+        new Customer("AB", "Michael Jackson"),
+        new Customer("AC", "Meryl Streep")};
 }
